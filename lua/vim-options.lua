@@ -6,3 +6,4 @@ vim.cmd("set number")
 vim.g.mapleader = " "
 
 vim.keymap.set('n',"<C-t>",":tabnext<CR>")
+

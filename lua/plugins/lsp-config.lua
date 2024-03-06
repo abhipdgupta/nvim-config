@@ -21,7 +21,7 @@ return {
 
       lspc.lua_ls.setup({ capabilities = capabilities })
       lspc.tsserver.setup({ capabilities = capabilities })
-      
+
       local opts = {}
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
