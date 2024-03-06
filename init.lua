@@ -15,5 +15,7 @@ require("vim-options")
 require("lazy").setup("plugins")
 
 
+vim.cmd "colorscheme nightfly"
+
 
 
