@@ -1,24 +1,14 @@
 return {
-  'goolord/alpha-nvim',
+  "goolord/alpha-nvim",
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
     local alpha = require("alpha")
-    local dashboard = require('alpha.themes.dashboard')
+    local dashboard = require("alpha.themes.dashboard")
 
-    dashboard.section.header.val = {
-      [[`8.`888b                 ,8' .8.           8888888888',8888'  8 8888 8 888888888o.  ]],
-      [[ `8.`888b               ,8' .888.                 ,8',8888'   8 8888 8 8888    `88. ]],
-      [[  `8.`888b             ,8' :88888.               ,8',8888'    8 8888 8 8888     `88 ]],
-      [[   `8.`888b     .b    ,8' . `88888.             ,8',8888'     8 8888 8 8888     ,88 ]],
-      [[    `8.`888b    88b  ,8' .8. `88888.           ,8',8888'      8 8888 8 8888.   ,88' ]],
-      [[     `8.`888b .`888b,8' .8`8. `88888.         ,8',8888'       8 8888 8 888888888P'  ]],
-      [[      `8.`888b8.`8888' .8' `8. `88888.       ,8',8888'        8 8888 8 8888`8b      ]],
-      [[       `8.`888`8.`88' .8'   `8. `88888.     ,8',8888'         8 8888 8 8888 `8b.    ]],
-      [[        `8.`8' `8,`' .888888888. `88888.   ,8',8888'          8 8888 8 8888   `8b.  ]],
-      [[         `8.`   `8' .8'       `8. `88888. ,8',8888888888888   8 8888 8 8888     `88 ]],
-    }
+    local arts=require("ascii_arts")
+    dashboard.section.header.val = arts.art_01
     dashboard.section.buttons.val = {
 
       dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
@@ -27,5 +17,5 @@ return {
     }
     dashboard.section.footer.val = "NEO VIM ROCKS"
     alpha.setup(dashboard.opts)
-  end
-};
+  end,
+}

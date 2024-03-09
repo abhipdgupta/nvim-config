@@ -14,8 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 
-
-vim.cmd "colorscheme nightfly"
-
-
-
+vim.cmd("colorscheme rose-pine")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "LineNR", { bg = "none" })
